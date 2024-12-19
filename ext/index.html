@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" style="min-width: 300px;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>xRead</title>
+  <link href="vendor/output.css" rel="stylesheet">
+</head>
+<body 
+    class="flex flex-col items-center justify-center h-screen text-white" 
+    style="background-color: #0f0f0f;"
+>
+  <!-- GIF Section -->
+  <div class="flex flex-col items-center">
+    <img src="public/prism4.gif" alt="Prism" class="w-64 h-56">
+    <h1 class="text-3xl font-mono font-extrabold">xRead</h1>
+
+    <!-- Green Icon and Connected -->
+    <div class="flex items-center mt-2">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6 text-green-400" viewBox="0 0 24 24">
+        <path d="M12 22c5.522 0 10-4.477 10-10S17.522 2 12 2 2 6.477 2 12s4.478 10 10 10zm0-18a8 8 0 110 16 8 8 0 010-16z"></path>
+        <path d="M10.293 14.293a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414L11 12.586l-1.293-1.293a1 1 0 10-1.414 1.414l2 2z"></path>
+      </svg>
+      <span class="text-green-400 font-semibold ml-2">Connected</span>
+    </div>
+  </div>
+
+  <!-- Balance Section -->
+  <div class="mt-6 text-center shadow-2xl">
+    <h2 class="text-xl font-semibold text-gray-300">Balance</h2>
+    <p class="text-2xl font-bold text-green-400 mt-2" id="balance">0.00</p>
+
+    <!-- Withdraw Button -->
+    <button 
+      class="mt-4 px-6 py-2 bg-green-500 hover:bg-green-600 text-white text-lg font-semibold rounded shadow focus:outline-none focus:ring-2 focus:ring-green-300"
+      id="withdraw"
+      >
+      Withdraw
+    </button>
+  </div>
+
+  <!-- Modal -->
+  <div id="alertModal" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
+    <div class="bg-white text-black rounded-lg shadow-lg p-6 max-w-sm w-full text-center">
+      <h2 class="text-xl font-bold mb-4">Withdraw Info</h2>
+      <p class="mb-6 text-lg font-mono">You can withdraw a minimum of 1000 $READ.</p>
+      <button 
+        class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-green-300"
+        id="closeModal"
+      >
+        OK
+      </button>
+    </div>
+  </div>
+
+  <p class="font-mono text-sm my-10">2024, xRead</p>
+  <script src="vendor/jquery.js" defer></script>
+  <script src="vendor/main.js" defer></script>
+</body>
+</html>
